@@ -1,0 +1,528 @@
+/* Tipografía y fondo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #828282;
+    background-color: #a2c552fb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background-size: cover; /* Mantener el tamaño de fondo como está */
+}
+
+/* Color personalizado para header, footer y separador */
+header {
+    font-size: 1.4rem;
+}
+
+header, footer, .separador {
+    background: linear-gradient(45deg, #022002, #168d54, #33053e);
+    background-size: cover;
+}
+
+
+
+main {
+    background-color: hsl(0, 0%, 20%); /* Fondo más oscuro para contrastar */
+    color:white; /* Color de texto blanco para mejor legibilidad */
+
+    background-image: url(../images/fondoGeneral1.jpg);
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/* Sección Hero */
+.hero {
+    position: relative; 
+    overflow: hidden; 
+    height: 100vh; 
+    background-image: url(../images/comida1.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.hero-text {
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
+    max-width: 600px; 
+}
+
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.order-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #e21515;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #00c47c;
+    transform: scale(1.05);
+    text-decoration: none;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.nav-link {
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(23, 222, 199, 0.726);
+}
+
+/* Barra separadora */
+.separador {
+    width: 100%;
+    height: 75px;
+    border-radius: 5px;
+}
+
+/* Galería de Productos */
+.productos {
+    padding: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Ajusta el tamaño de las tarjetas de producto */
+.product-card {
+    position: relative;
+    max-width: 350px; 
+    flex: 1 1 calc(25% - 1rem); 
+    margin: 0.8rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(86, 22, 22, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Asegurar que el texto y el botón se alineen bien */
+.product-info {
+    position: relative;
+    padding: 1rem;
+    background: rgba(83, 83, 83, 0.878);
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+.product-info h3 {
+    margin: 0;
+}
+
+/* Botón ver catálogo */
+.view-catalog-button {
+    
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    background-color: #e21515;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%; 
+}
+
+.view-catalog-button:hover {
+    background-color: #009f63;
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 1rem); 
+    }
+
+    .product-card img {
+        height: 150px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 1 1 100%; 
+    }
+
+    .product-card img {
+        height: 120px; 
+    }
+}
+
+
+/* Sección de Videos */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+
+.video-section h2 {
+    text-align: center; 
+    margin-bottom: 1rem;
+
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.video-section iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* Estilos generales */
+.section-background {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    background-image: url(../images/fondoGeneral1.jpg);
+}
+
+.reviews {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reviews h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* grid de las reseñas */
+.review-carousel {
+    display: grid;
+    gap: 1rem;
+}
+
+/* responsive grid */
+@media (min-width: 768px) {
+    .review-carousel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .review-carousel {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .review-carousel {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* estilos de cada reseña */
+.review {
+    background-color: #ef1f1f;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.05);
+}
+
+.review i {
+    font-size: 1.5rem;
+    color: #ffdd44;
+    margin-bottom: 0.5rem;
+}
+
+.review p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #ffffff;
+}
+
+.review span {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: #3a743a;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Formulario de contacto */
+.contact-form-section {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 40px; 
+    border-radius: 10px; 
+    max-width: 600px; 
+    margin: 2rem auto; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+}
+
+/* Estilos para el título del formulario */
+.contact-form-section h2 {
+    color: white; 
+    margin-bottom: 1rem; 
+    text-align: center; 
+}
+
+/* Etiquetas y textos en el formulario */
+.contact-form label,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    color: #fff; 
+}
+
+
+
+/* Estilos para inputs y textarea */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #168d54; 
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #000; 
+}
+
+/* Estilo específico para select */
+.contact-form select {
+    background-color: rgba(255, 255, 255, 0.9); 
+}
+
+/* Estilos para el botón */
+.contact-form button {
+    background-color: #e21515; 
+    color: #fff; 
+    padding: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    width: 100%; 
+}
+
+/* Cambiar color al pasar el mouse sobre el botón */
+.contact-form button:hover {
+    background-color: #00c47c; 
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .contact-form-section {
+        padding: 20px; 
+        margin: 1rem; 
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea,
+    .contact-form button {
+        padding: 8px; 
+    }
+
+    .contact-form button {
+        font-size: 16px; 
+    }
+}
+
+
+/* Fondo principal de la página contacto */
+#main-background {
+    background: url('../images/fondoComida1.avif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Estilos sucursales */
+
+.sucursales {
+    padding: 20px 0;
+}
+
+.sucursal {
+    background-color: #08754b;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sucursal h3 {
+    font-weight: bold;
+}
+
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; 
+    height: 0;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Estilos para el contenedor del enlace de WhatsApp */
+.whatsapp-container {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+}
+
+/* Estilos para el enlace de WhatsApp */
+.whatsapp-link {
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.whatsapp-icon {
+    width: 50px; 
+    height: auto; 
+    transition: transform 0.3s ease; 
+}
+
+/* Efecto de hover para el enlace */
+.whatsapp-link:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Efecto de hover para el icono */
+.whatsapp-link:hover .whatsapp-icon {
+    transform: rotate(10deg); 
+}
+
+
+/*CAJA DEL TEXTO DE NOSOTROS*/
+
+.caja-informativa {
+    background-color: rgba(80, 79, 79, 0.897); 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+
+/*alerta carrito*/
+
+.mensaje-carrito {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00a126;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mensaje-carrito i {
+    font-size: 1.2em;
+}
